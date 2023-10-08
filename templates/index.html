@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="text-center">
+            <h3>Asynchronous Restful Weather Service made using Fast API</h3>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h4>Endpoints:</h4>
+                <ul class="fs-5 ps-5">
+                    <li>GET current weather in the city</li>
+                    <a href="/api/weather/delhi?country=IN&units=metric" class="fs-4">GET /api/weather/city?country={country}&units={units}</a>
+                    <li>Parameters</li>
+                    <div class="ms-2">
+                        <p><b>Required</b> city={city} The name of the city to retrieve the weather</p>
+                        <p><b>Optional</b> country={country} The name of the country where city is located</p>
+                        <p><b>Optional</b> units={units} - (metric,imperial, standard), default is metric</p>
+                    </div>
+                </ul>
+                <h4>Response JSON</h4>
+                <p class="ms-3 fs-5">Click <a href="">the link</a> here to see an Example Response</p>
+            </div>
+
+            <div class="col-6">
+                <p class="fs-5 mt-5">This service has limited data.It is using open weather API for data retrieval.</p>
+                <h3 class="mt-5">Project Links</h3>
+                <div class="ms-4">
+                    <ul>
+                        <li><a href="">Github</a></li>
+                        <li><a href="">Deployed Website</a></li>
+                    </ul>
+                </div>
+
+                <p class="fs-5 fw-bold"> Copyright © DebasishMohanta10 | 2023</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
